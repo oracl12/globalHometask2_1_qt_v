@@ -102,18 +102,18 @@ bool Player::makeShot(int x, int y)
     std::cout << "Player making shot" << std::endl;
     if (x >= 0 && x < 10 && y >= 0 && y < 10)
     {
-        if (Enemy::getPrivateMatrix()[y][x] == TileStatus::SHIP)
+        if (Enemy::getPrivateMatrix()[x][y] == TileStatus::SHIP)
         {
-            Enemy::getPublicMatrix()[y][x].second = TileStatus::SHOTTEN;
-            Enemy::getPublicMatrix()[y][x].first->setStyleSheet("background-color: red;");
-            Enemy::getPrivateMatrix()[y][x] = TileStatus::SHOTTEN;
+            Enemy::getPublicMatrix()[x][y].second = TileStatus::SHOTTEN;
+            Enemy::getPublicMatrix()[x][y].first->setStyleSheet("background-color: red;");
+            Enemy::getPrivateMatrix()[x][y] = TileStatus::SHOTTEN;
             std::cout << "Player: Shot successful!" << std::endl;
             return true;
         }
         else
         {
-            Enemy::getPublicMatrix()[y][x].second = TileStatus::CLEARED;
-            Enemy::getPublicMatrix()[y][x].first->setStyleSheet("background-color: gray;");
+            Enemy::getPublicMatrix()[x][y].second = TileStatus::CLEARED;
+            Enemy::getPublicMatrix()[x][y].first->setStyleSheet("background-color: gray;");
             std::cout << "Player: Shot missed!" << std::endl;
             return false;
         }

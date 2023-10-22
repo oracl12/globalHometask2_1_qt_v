@@ -7,12 +7,6 @@
 #include <unistd.h>
 #endif
 
-inline void SleepS(float seconds)
-{
-#ifdef _WIN32
-    Sleep(seconds * 1000);
-#else
-    sleep(seconds);
-#endif
-}
+void SleepS(float seconds);
+
 #endif // OTHER_H

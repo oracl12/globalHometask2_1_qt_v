@@ -13,14 +13,14 @@ void Game::run()
     if (Conf::gameMode == 'b') {
         while (true) {
             std::cout << "LOOPING" << std::endl;
-            if (!Conf::Shared::pauseThread) {
+            if (!ConfS::getPauseThread()) {
                 Bot::entry_point();
                 std::cout << "BOT MAKE STEP" << std::endl;
-                Conf::Shared::pauseThread = true;
+                ConfS::setPauseThread(true);
             }
             SleepS(0.1);
 
-            if (Conf::Shared::stopThread){
+            if (ConfS::getStopThread()){
                 std::cout << "STOP THREAD" << std::endl;
                 break;
             }
@@ -31,7 +31,7 @@ void Game::run()
 }
 
 Game::~Game() {
-    Conf::Shared::stopThread = true;
+    ConfS::setStopThread(true);
 
     if (botThread.joinable()) {
         botThread.join();

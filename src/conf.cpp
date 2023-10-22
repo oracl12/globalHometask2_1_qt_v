@@ -9,3 +9,7 @@ bool Conf::gameStarted = false;
 bool Conf::Shared::playerStep = true;
 bool Conf::Shared::pauseThread = true;
 bool Conf::Shared::stopThread = false;
+
+std::mutex Conf::Shared::stopThreadGuard;
+std::mutex Conf::Shared::playerStepGuard;
+std::mutex Conf::Shared::pauseThreadGuard;

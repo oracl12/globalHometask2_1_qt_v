@@ -53,18 +53,18 @@ void MainWindow::handleEnemyMatrixButtonClick(){
         return;
     }
 
-    if (Conf::Shared::playerStep)
+    if (ConfS::getPlayerStep())
     {
         QPushButton *clickedButton = qobject_cast<QPushButton*>(sender());
         if (clickedButton) {
             qDebug() << "Button clicked: " << clickedButton->text();
-            int x = clickedButton->text()[clickedButton->text().size() - 1].digitValue();
-            int y = clickedButton->text()[clickedButton->text().size() - 2].digitValue();
+            int x = clickedButton->text()[clickedButton->text().size() - 2].digitValue();
+            int y = clickedButton->text()[clickedButton->text().size() - 1].digitValue();
 
             std::cout << "SHOT WAS MADEN AT x: " << x << "y: " << y << std::endl;
             if (!Player::makeShot(x, y)){
-                Conf::Shared::playerStep = false;
-                Conf::Shared::pauseThread = false;
+                ConfS::setPlayerStep(false);
+                ConfS::setPauseThread(false);
             }
         }
     } else {
@@ -138,8 +138,8 @@ void MainWindow::on_pushButton_clicked()
     if (Conf::gameStarted) {
         return;
     }
-    if (Player::isShipPlacementFinished())
-    {
+//    if (Player::isShipPlacementFinished())
+//    {
         if (!Conf::ready) {
             ui->NotReadyLabel->hide();
             ui->readyLabel->show();
@@ -149,7 +149,7 @@ void MainWindow::on_pushButton_clicked()
             ui->readyLabel->hide();
             Conf::ready = false;
         }
-    } else {
-        QMessageBox::question(this, "Error", "Pls fill up ships firstly", QMessageBox::Ok);
-    }
+//    } else {
+//        QMessageBox::question(this, "Error", "Pls fill up ships firstly", QMessageBox::Ok);
+//    }
 }

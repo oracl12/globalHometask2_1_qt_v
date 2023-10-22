@@ -32,7 +32,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         headers/ship_structs.h
         headers/game.h src/game.cpp
         headers/other.h
-
+        src/other.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET globalHometask2_1_qt_v APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
