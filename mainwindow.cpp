@@ -138,8 +138,8 @@ void MainWindow::on_pushButton_clicked()
     if (Conf::gameStarted) {
         return;
     }
-//    if (Player::isShipPlacementFinished())
-//    {
+    if (Player::isShipPlacementFinished())
+    {
         if (!Conf::ready) {
             ui->NotReadyLabel->hide();
             ui->readyLabel->show();
@@ -149,7 +149,7 @@ void MainWindow::on_pushButton_clicked()
             ui->readyLabel->hide();
             Conf::ready = false;
         }
-//    } else {
-//        QMessageBox::question(this, "Error", "Pls fill up ships firstly", QMessageBox::Ok);
-//    }
+    } else {
+        QMessageBox::question(this, "Error", "Pls fill up ships firstly", QMessageBox::Ok);
+    }
 }
