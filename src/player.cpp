@@ -1,4 +1,4 @@
-#include "player.h"
+#include "../headers/player.h"
 
 bool Player::placeShip(int startX, int startY, ShipStruct &ship) {
     int shipLength = ship.body.size();

@@ -24,16 +24,14 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
 
-
-        conf.h conf.cpp
-
-        player.h player.cpp
-        enemy.h
-        bot.h bot.cpp
-        ship_wig.h ship_wig.cpp
-        ship_structs.h
-        game.h game.cpp
-        other.h
+        headers/conf.h src/conf.cpp
+        headers/player.h src/player.cpp
+        headers/enemy.h
+        headers/bot.h src/bot.cpp
+        headers/ship_wig.h src/ship_wig.cpp
+        headers/ship_structs.h
+        headers/game.h src/game.cpp
+        headers/other.h
 
     )
 # Define target properties for Android with Qt 6 as:

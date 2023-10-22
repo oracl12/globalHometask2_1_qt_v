@@ -3,13 +3,12 @@
 #include <string>
 #include <random>
 
-#include "bot.h"
-#include "ship_wig.h"
-#include "ship_structs.h"
-#include "player.h"
-#include "conf.h"
-
-#include "other.h"
+#include "../headers/bot.h"
+#include "../headers/ship_wig.h"
+#include "../headers/ship_structs.h"
+#include "../headers/player.h"
+#include "../headers/conf.h"
+#include "../headers/other.h"
 
 bool currentlySearching = true;
 bool currentlySearchingVectorOfShip = false;

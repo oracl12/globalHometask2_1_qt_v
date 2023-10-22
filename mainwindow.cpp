@@ -1,12 +1,5 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include <QIntValidator>
-#include <QMessageBox>
-#include <QGridLayout>
-
-#include "player.h"
-#include "bot.h"
-#include "ship_wig.h"
 
 void MainWindow::createBlackButtonMatrix() {
     for (int row = 0; row < 10; ++row) {

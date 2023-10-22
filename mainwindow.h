@@ -3,12 +3,16 @@
 
 #include <QMainWindow>
 #include <iostream>
-
-#include "conf.h"
-#include "ship_wig.h"
-#include "ship_structs.h"
-#include "player.h"
 #include "QDebug"
+#include <QIntValidator>
+#include <QMessageBox>
+#include <QGridLayout>
+
+#include "headers/conf.h"
+#include "headers/ship_wig.h"
+#include "headers/ship_structs.h"
+#include "headers/player.h"
+#include "headers/bot.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

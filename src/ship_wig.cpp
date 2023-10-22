@@ -1,5 +1,5 @@
-#include "ship_wig.h"
-#include "player.h"
+#include "../headers/ship_wig.h"
+#include "../headers/player.h"
 
 void ShipWidget::drawShips()
 {

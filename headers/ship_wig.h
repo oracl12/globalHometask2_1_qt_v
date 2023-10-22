@@ -1,8 +1,9 @@
 #ifndef SHIP_WIG_H
 #define SHIP_WIG_H
 
-#include <vector>
 #include "ship_structs.h"
+
+#include <vector>
 #include <QPushButton>
 #include <QtWidgets>
 #include <iostream>

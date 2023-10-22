@@ -1,4 +1,4 @@
-#include "conf.h"
+#include "../headers/conf.h"
 
 char Conf::gameMode= 'b'; // bot - b, network - n
 int Conf::port = 5555;

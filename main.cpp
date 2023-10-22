@@ -4,7 +4,7 @@
 #include <QPushButton>
 #include <QStyleFactory>
 
-#include "game.h"
+#include "headers/game.h"
 
 // make mutex on all getters from conf shared
 // fix why bot is shooting in mirror
